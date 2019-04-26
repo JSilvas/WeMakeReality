@@ -7,8 +7,16 @@
   <meta name="author" content="">
   <link rel="stylesheet" href="css/bootstrap/bootstrap-theme.css">
   <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/particles.css">
   <link rel="icon" href="favicon.ico">
 </head>
+<!-- stats - count particles -->  
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<!-- stats.js lib --> 
+<script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+
 <div class="container-fluid">
   <!-- Nav Section  Start-->
   <nav class="navbar navbar-expand-lg navbar-light"><a class="navbar-brand col-4 pl-0 mr-0" href="index.html">We Make Reality</a>
@@ -25,12 +33,13 @@
   </nav>
   <!-- Nav Section End-->
   <!-- Hero Section Start-->
-  <section class="py-5" style="background: url('images/hero-background.jpg')fixed center 100%;background-size: cover">
+  <section id="particles-js" class="py-5" style="background: url('images/hero-background.jpg')fixed center 100%;background-size: cover">
     <div class="container text-center"><strong> </strong>
       <h1 class="display-4 my-3">We&apos;re a community exploring the potential of emerging technology.</h1><a class="btn btn-primary my-2" href="#projects">Explore Projects and Research &#x1F447;</a>
     </div>
   </section>
   <!-- Hero Section End-->
+  
   <!-- Project Gallery Start-->
   <section class="py-5" id="projects">
     <!-- <h2 class="mb-5 text-center"> Project Gallery </h2>-->
@@ -146,6 +155,16 @@
     </div>
   </section>
   <!-- Sign Up Section End-->
+
+
+
+
+
+  
+  
+  
+  
+  
   <footer class="py-3">
     <div class="container">
       <div class="d-flex justify-content-center align-items-center flex-column">
@@ -161,3 +180,4 @@
 <script src="js/jquery/jquery.min.js"></script>
 <script src="js/popper/popper.min.js"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
+<script src="js/scripts/particles.js"></script>
