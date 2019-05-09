@@ -37,6 +37,12 @@ h1, h2, h3, h4, h5, h6,
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
+.card a {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
 
 /* tab naviagation styling */
 .nav-tabs>li>a {
