@@ -72,3 +72,9 @@ div.modal-body {
 div.modal-body  div.container-fluid {
   padding: 0;
 }
+
+@media (min-width: 992px) {
+  div.modal-body  div.container-fluid {
+    padding: 1.5rem;
+  }
+}
