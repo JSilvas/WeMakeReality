@@ -1,3 +1,8 @@
+/* Medium Text Sizes */
+html {
+  font-size: 1.25em;
+}
+
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
@@ -5,96 +10,72 @@ h1, h2, h3, h4, h5, h6,
   line-height: 1.2;
 }
 
-/* h1, .h1 {
-  font-size: 2.5rem;
+
+/* responsive iframes */
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
 }
 
-@media (max-width: 1200px) {
-  h1, .h1 {
-    font-size: calc(1.375rem + 1.5vw) ;
-  }
+.iframe-container iframe {
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
-h2, .h2 {
-  font-size: 2rem;
+
+/* project preview cards */
+#projects a {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
 }
 
-@media (max-width: 1200px) {
-  h2, .h2 {
-    font-size: calc(1.325rem + 0.9vw) ;
-  }
+.card {
+  transition: box-shadow 0.5s;
 }
 
-h3, .h3 {
-  font-size: 1.75rem;
+.card:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
 }
 
-@media (max-width: 1200px) {
-  h3, .h3 {
-    font-size: calc(1.3rem + 0.6vw) ;
-  }
+
+
+/* tab naviagation styling */
+.nav-tabs>li>a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
 }
 
-h4, .h4 {
-  font-size: 1.5rem;
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
 }
 
-@media (max-width: 1200px) {
-  h4, .h4 {
-    font-size: calc(1.275rem + 0.3vw) ;
-  }
+
+/* Modal Windows */
+.modal-header {
+  padding: 15px 1rem;
 }
 
-h5, .h5 {
-  font-size: 1.25rem;
+div.modal-body {
+  padding: 0;
 }
 
-h6, .h6 {
-  font-size: 1rem;
-} */
-
-/* Medium Text Sizes */
-html {
-  font-size: 1.25em;
-}
-/* 
-h1, .h1 {
-  font-size: 2.6rem;
+div.modal-body  div.container-fluid {
+  padding: 0;
 }
 
-@media (max-width: 1200px) {
-  h1, .h1 {
-    font-size: calc(1.475rem + 1.5vw) ;
-  }
-}
-
-h2, .h2 {
-  font-size: 2.1rem;
-}
-
-@media (max-width: 1200px) {
-  h2, .h2 {
-    font-size: calc(1.425rem + 0.9vw) ;
-  }
-}
-
-h3, .h3 {
-  font-size: 1.85rem;
-}
-
-@media (max-width: 1200px) {
-  h3, .h3 {
-    font-size: calc(1.4rem + 0.6vw) ;
-  }
-}
-
-h4, .h4 {
-  font-size: 1.6rem;
-}
-
-@media (max-width: 1200px) {
-  h4, .h4 {
-    font-size: calc(1.375rem + 0.3vw) ;
+@media (min-width: 992px) {
+  div.modal-body  div.container-fluid {
+    padding: 1.5rem;
   }
 }
 
