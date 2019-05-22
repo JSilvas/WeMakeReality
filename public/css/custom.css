@@ -62,7 +62,7 @@ h1, h2, h3, h4, h5, h6,
 
 
 /* Modal Windows */
-.modal-header {
+div.modal-header {
   padding: 15px 1rem;
 }
 
@@ -78,6 +78,24 @@ div.modal-body  div.container-fluid {
 /*Privacy Content Padding */
 #privacy h1,h2,h3,h4 {
   padding: 0.5rem 0;
+}
+
+/* Desktop Layout Rules */
+@media (min-width: 992px) {
+  
+  /* Modal Windows */
+  div.modal-header {
+    padding: 15px 1rem;
+    padding-left: 35px;
+  }
+
+  div.modal-body {
+    padding: auto 15px;
+  }
+
+  div.modal-body  div.container-fluid {
+    padding: 0;
+  }
 }
 
 
