@@ -1,25 +1,381 @@
-[debug] [2019-05-26T23:14:01.001Z] ----------------------------------------------------------------------
-[debug] [2019-05-26T23:14:01.006Z] Command:       /home/jay/.nvm/versions/node/v12.2.0/bin/node /home/jay/.nvm/versions/node/v12.2.0/bin/firebase serve
-[debug] [2019-05-26T23:14:01.006Z] CLI Version:   6.10.0
-[debug] [2019-05-26T23:14:01.007Z] Platform:      linux
-[debug] [2019-05-26T23:14:01.007Z] Node Version:  v12.2.0
-[debug] [2019-05-26T23:14:01.585Z] Time:          Sun May 26 2019 15:14:01 GMT-0800 (GMT-08:00)
-[debug] [2019-05-26T23:14:01.585Z] ----------------------------------------------------------------------
+[debug] [2019-05-26T23:23:52.182Z] ----------------------------------------------------------------------
+[debug] [2019-05-26T23:23:52.191Z] Command:       /home/jay/.nvm/versions/node/v12.2.0/bin/node /home/jay/.nvm/versions/node/v12.2.0/bin/firebase deploy
+[debug] [2019-05-26T23:23:52.191Z] CLI Version:   6.10.0
+[debug] [2019-05-26T23:23:52.191Z] Platform:      linux
+[debug] [2019-05-26T23:23:52.191Z] Node Version:  v12.2.0
+[debug] [2019-05-26T23:23:53.042Z] Time:          Sun May 26 2019 15:23:52 GMT-0800 (GMT-08:00)
+[debug] [2019-05-26T23:23:53.042Z] ----------------------------------------------------------------------
 [debug] 
-[debug] [2019-05-26T23:14:01.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2019-05-26T23:14:01.611Z] > authorizing via signed-in user
-[debug] [2019-05-26T23:14:01.612Z] [iam] checking project wmr-staging for permissions ["firebase.projects.get"]
-[debug] [2019-05-26T23:14:01.616Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wmr-staging:testIamPermissions  
+[debug] [2019-05-26T23:23:53.064Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-26T23:23:53.066Z] > authorizing via signed-in user
+[debug] [2019-05-26T23:23:53.066Z] [iam] checking project wmr-staging for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2019-05-26T23:23:53.074Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wmr-staging:testIamPermissions  
 
-[debug] [2019-05-26T23:14:11.096Z] <<< HTTP RESPONSE 200
-[debug] [2019-05-26T23:14:11.103Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wmr-staging  
+[debug] [2019-05-26T23:24:00.089Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-26T23:24:00.095Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/wmr-staging  
  
-[debug] [2019-05-26T23:14:23.977Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-26T23:24:05.395Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from '/mnt/c/Users/jayin/development/WeMakeReality'...
+[info] === Deploying to 'wmr-staging'...
 [info] 
-[debug] [2019-05-26T23:14:23.986Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/228318890104/clients/_:getWebAppConfig  
- 
-[debug] [2019-05-26T23:14:46.624Z] <<< HTTP RESPONSE 200
-[info] i  hosting: Serving hosting files from: public
-[info] ✔  hosting: Local server: http://localhost:5000
+[info] i  deploying hosting
+[debug] [2019-05-26T23:24:05.502Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/wmr-staging/versions  
+
+[debug] [2019-05-26T23:24:08.662Z] <<< HTTP RESPONSE 200
+[info] i  hosting[wmr-staging]: beginning deploy...
+[info] i  hosting[wmr-staging]: found 74 files in public
+[debug] [2019-05-26T23:24:08.863Z] [hosting] hash cache [cHVibGlj] not populated
+[debug] [2019-05-26T23:24:10.000Z] [hosting] hash cache [cHVibGlj] stored for 74 files
+[debug] [2019-05-26T23:24:10.001Z] [hosting][hash queue][FINAL]
+[debug] [2019-05-26T23:24:10.002Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/wmr-staging/versions/3f87ddea90f022d3:populateFiles  
+ <request body omitted>
+[debug] [2019-05-26T23:24:12.603Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-26T23:24:12.890Z] [hosting][populate queue][FINAL]
+[debug] [2019-05-26T23:24:12.894Z] [hosting] uploads queued: 74
+[debug] [2019-05-26T23:24:26.152Z] [uploadQueue] Retrying task a0e139ba4c240b6fd1f6f2dc07d4def0b734420ee21f92a12e7d3058f1f6aa4f
+[debug] [2019-05-26T23:24:43.459Z] [uploadQueue] Retrying task e9beb800da5f3601341c7f5d9ae1af549eb6e99412b4eb92f79d07d359767e0c
+[debug] [2019-05-26T23:24:43.462Z] [uploadQueue] Retrying task c399f82bbb5418159afd05732eebcef781eb3e7316833f16ce0fc664b63c34ff
+[debug] [2019-05-26T23:24:43.473Z] [uploadQueue] Retrying task 9896c41660a7256020d2a5657a1322be6b37587b2202c0b66f516fe0cb96627a
+[debug] [2019-05-26T23:24:43.478Z] [uploadQueue] Retrying task 0d8a300f3940dedd7502b2172fec95e947d3c7b45cd0ea62a302f05682b81ccf
+[debug] [2019-05-26T23:24:43.487Z] [uploadQueue] Retrying task bee3c228ac8fb4fedbb45b3e6ceb2c25148a21bbf47ef8bda4dea4e784ee30fc
+[debug] [2019-05-26T23:24:43.490Z] [uploadQueue] Retrying task 2d91e76f27524fa032f02d4c514fe3d9b4a46c1e2e35d94224e223c79ea2187e
+[debug] [2019-05-26T23:24:43.494Z] [uploadQueue] Retrying task 0355cfaea7d957be674d1a94c22f0c043d7bd24c853a758fa932cb040f9505bb
+[debug] [2019-05-26T23:24:43.503Z] [uploadQueue] Retrying task 19308217de5bb43149d0c9cb1b7ebd37347b42a95f524e749b2cba03ee8d3a3f
+[debug] [2019-05-26T23:24:43.513Z] [uploadQueue] Retrying task fa29f93fa7afca7e8cd3b666a1a9a7ed58bc828afd15b53c5ce8b6d6f54f38ac
+[debug] [2019-05-26T23:24:43.520Z] [uploadQueue] Retrying task 9431d730b3a122fa91571737c5d6c96443004551643a8c6f6ef7661cefd73a0e
+[debug] [2019-05-26T23:24:43.525Z] [uploadQueue] Retrying task cad5401fe6f082566713bed008a57209fe87aeea83a2e28d48acfe7f99aec36a
+[debug] [2019-05-26T23:24:43.528Z] [uploadQueue] Retrying task f21030401989191216272619dfbcd8f7fab1abe02a1610fcaacaa2f3d8857fe5
+[debug] [2019-05-26T23:24:43.530Z] [uploadQueue] Retrying task 173bfb01859cfd71ac0f69c9ff4933ea678976f6c83aa6e6855e00ae89550e77
+[debug] [2019-05-26T23:24:43.543Z] [uploadQueue] Retrying task 4912ee4c38af7e8c3c6324bf52286b82103a5d2f5aca04b61a3434efda445702
+[debug] [2019-05-26T23:24:43.552Z] [uploadQueue] Retrying task 68d00994d1b5399bd4c73cef61dd32290f4f786bf104ab9b2d8275c42977db5f
+[debug] [2019-05-26T23:24:43.556Z] [uploadQueue] Retrying task e5adc496307cde6da4657acb1060de29ce8e376096f3c733297ee94720878e20
+[debug] [2019-05-26T23:24:43.559Z] [uploadQueue] Retrying task 3d023de7fc389508b9fa3d12b1e5aabf3c373b3c6c9c157cbeaaf6f4bc792403
+[debug] [2019-05-26T23:24:43.561Z] [uploadQueue] Retrying task 5a7f8694bce670243a05dca6db1b4d11f6ccff662ec4503e73c40e71d112b0c2
+[debug] [2019-05-26T23:24:43.569Z] [uploadQueue] Retrying task add833e8f8e99435d30e0246f72c7b499f89ac0ba05bcf0039f6d504a0b83562
+[debug] [2019-05-26T23:24:43.575Z] [uploadQueue] Retrying task 73bdcbb3bfdfef02d8bcbef7685d262bf70ae9e585be2f60e285746a163b79f6
+[debug] [2019-05-26T23:24:43.603Z] [uploadQueue] Retrying task 180a501ca1023536fd246f6564cf609a51ed2e3abd841042918544a301b147fd
+[debug] [2019-05-26T23:24:43.605Z] [uploadQueue] Retrying task 22dc5af7ecdf7efe5001151fe446e4100b85ae79276abd0bc2f56dcbe2b3fd68
+[debug] [2019-05-26T23:24:43.607Z] [uploadQueue] Retrying task 748f4c1de8c29b65ff7922465de73888635523f2bf478c00118dcc8733f1d47c
+[debug] [2019-05-26T23:24:43.609Z] [uploadQueue] Retrying task 4530fee86102b87d9cd85052818e6f5a4b0cb2cdbf7907d4f6312eb05c7a9e13
+[debug] [2019-05-26T23:24:43.610Z] [uploadQueue] Retrying task 15deab7b5a1676b1090039532118da1c02bbf75f97f299004782e478261e3587
+[debug] [2019-05-26T23:24:43.612Z] [uploadQueue] Retrying task 03e4d730b69ee593e1b318a673d11d83e7dcf3863b2e032c5ee06fff5adec82a
+[debug] [2019-05-26T23:24:43.614Z] [uploadQueue] Retrying task 113b971f67dc81a5361953cc3da412017342049c5dd20ebe6d06529857464585
+[debug] [2019-05-26T23:24:43.620Z] [uploadQueue] Retrying task 773dd4e9c8418e77e4b7061a68439d79f637a4bdb31ad4cdb6dfcea7118a6e0a
+[debug] [2019-05-26T23:24:43.620Z] [uploadQueue] Retrying task cd9584f1e3dc89ff9d1ac6a0f556daf5d86d2f37d1696f376299f8f02ca16c34
+[debug] [2019-05-26T23:24:43.621Z] [uploadQueue] Retrying task 65e632abef7ee7f585b70d6f8ecd4f124e9ff542f8ad6aa8ef886f47ecefdac3
+[debug] [2019-05-26T23:24:43.622Z] [uploadQueue] Retrying task 0eba42d2ee630febb2280a1d52eea2dcb298aa4e3d0c505310ca23750d4029dc
+[debug] [2019-05-26T23:24:43.623Z] [uploadQueue] Retrying task c2ea5fb2ae11dcb80c4692cd2fd2c01fa50001efed1a5ee928fc124fd5a1753e
+[debug] [2019-05-26T23:24:43.624Z] [uploadQueue] Retrying task 75d648177a01dcc46f4f8b0ab8296afb4994fdd54f5b3124692a7ed760b7c110
+[debug] [2019-05-26T23:24:43.625Z] [uploadQueue] Retrying task a6df138fa55f43634331a9565aee51bd5054f22cd779c6b87e2f5cd708f8fbb3
+[debug] [2019-05-26T23:24:43.627Z] [uploadQueue] Retrying task 3c64f074f76e8a5e0411bdfa7c60e587886d80e99f4419f4bc6f1404f32531a6
+[debug] [2019-05-26T23:24:43.629Z] [uploadQueue] Retrying task f5cbd2c3f3d99b061f715238e8f3ce34bf35a71ff63fa41e937fd3fc5e09de04
+[debug] [2019-05-26T23:24:43.630Z] [uploadQueue] Retrying task a22bd18ed7c2ceb39d97c93e8929a021083d35c5d118e054272f185cacbb09b0
+[debug] [2019-05-26T23:24:43.634Z] [uploadQueue] Retrying task 74182f3cd90b359115bc5411a70c8ac37cb220360ce8d5a1bb6b2cc8d024cf0e
+[debug] [2019-05-26T23:24:43.639Z] [uploadQueue] Retrying task 1944f5ec3baceba2be9323cef9c2576878d6923b9f0fdaf544d2d065c4bc2a06
+[debug] [2019-05-26T23:24:43.642Z] [uploadQueue] Retrying task 0c4f8b4b518f3d34360264caefdc245688fde221ebf90c67e6937e930cbff0c4
+[debug] [2019-05-26T23:24:43.643Z] [uploadQueue] Retrying task 84608c149ba6f08635b9d0a6e0eeb181f11bbbeece69050a537c722d4b98ebdb
+[debug] [2019-05-26T23:24:43.644Z] [uploadQueue] Retrying task 3d7a808c698e5787123f4bf3fea3f8220c8e2a6642058d30ffd6887695e08a81
+[debug] [2019-05-26T23:24:43.645Z] [uploadQueue] Retrying task b402294d889f0c565229a1d3fdb70f94580a9a6bc36a69bea0c29b93ed659e1b
+[debug] [2019-05-26T23:24:43.646Z] [uploadQueue] Retrying task f2f05489982ca033731ba993459a7ecaf3e6485a33fc3552ef2033a62ee2cf6e
+[debug] [2019-05-26T23:24:43.650Z] [uploadQueue] Retrying task 3a448ec57bb4df02629b485ac29b3abc1de6c6c8b787c59c48060fcdec0df785
+[debug] [2019-05-26T23:24:43.651Z] [uploadQueue] Retrying task 3bd01fbf47f240a0c18205ba16e9a9142990917b2c04a188d625fd84e5bdb208
+[debug] [2019-05-26T23:24:43.652Z] [uploadQueue] Retrying task 1cd9b9e3a5cc15c2c3159c31621965c79acf3e740f2c00f4ac69c0998afdf2c6
+[debug] [2019-05-26T23:24:43.653Z] [uploadQueue] Retrying task 6f52f8d4f98b7722db9e65a6d01e6f1325908ffda679e9bccc442fd45ffdd80c
+[debug] [2019-05-26T23:24:43.654Z] [uploadQueue] Retrying task ac05b1d89aa5df68b1e148324e6e6efdc7f464e5c50a4a716a895b957ed3d6e3
+[debug] [2019-05-26T23:24:43.655Z] [uploadQueue] Retrying task 4eedb328824ee9e3ec6a6068201fbd77d286a802046438c36e5fa94074e46255
+[debug] [2019-05-26T23:24:43.656Z] [uploadQueue] Retrying task b246fe9399b9c58c49e4141c0fa238a79f2a6e9a4a768b028f861a8bb8b0844a
+[debug] [2019-05-26T23:24:43.657Z] [uploadQueue] Retrying task 61d272085309498279816f59e28fd46d168a43b137c36327c548510bef58e4f9
+[debug] [2019-05-26T23:24:43.659Z] [uploadQueue] Retrying task 6d416df449d2a5254b6e188cbbac81653edede925ac794e927594a6d8d31339a
+[debug] [2019-05-26T23:24:43.663Z] [uploadQueue] Retrying task 5ffca12c57e7e5ba75a200bdaab89fb789e24da1b801cae4d40ccd85720e8eb8
+[debug] [2019-05-26T23:24:43.667Z] [uploadQueue] Retrying task 282519b3e91367b6aebd59e84232ecbca64dad8e57a8113b7ce35a185711f3b6
+[debug] [2019-05-26T23:24:47.698Z] [uploadQueue] Retrying task a9c736f13b97381517ea29787c8b3862d150f5a9ad367724dd1b29374026a22c
+[debug] [2019-05-26T23:24:49.796Z] [uploadQueue] Retrying task 18c2035e1ac0e8bd7d4c0d90a7ce38656c085199b29f47c388c41aad06509851
+[debug] [2019-05-26T23:24:51.637Z] [uploadQueue] Retrying task 68022e2e0daca4b81676acbcdfd4461832e1a22a3149ab8e24b8b0cf3cbc910e
+[debug] [2019-05-26T23:24:52.303Z] [uploadQueue] Retrying task 0e8383d7c977a6e7d0ad8c3be49c4e0a77b8753adb46e5f306a891d63c8c80b1
+[debug] [2019-05-26T23:24:56.978Z] [uploadQueue] Retrying task a0e139ba4c240b6fd1f6f2dc07d4def0b734420ee21f92a12e7d3058f1f6aa4f
+[debug] [2019-05-26T23:25:14.391Z] [uploadQueue] Retrying task c399f82bbb5418159afd05732eebcef781eb3e7316833f16ce0fc664b63c34ff
+[debug] [2019-05-26T23:25:14.396Z] [uploadQueue] Retrying task e9beb800da5f3601341c7f5d9ae1af549eb6e99412b4eb92f79d07d359767e0c
+[debug] [2019-05-26T23:25:14.479Z] [uploadQueue] Retrying task 0d8a300f3940dedd7502b2172fec95e947d3c7b45cd0ea62a302f05682b81ccf
+[debug] [2019-05-26T23:25:14.483Z] [uploadQueue] Retrying task bee3c228ac8fb4fedbb45b3e6ceb2c25148a21bbf47ef8bda4dea4e784ee30fc
+[debug] [2019-05-26T23:25:14.485Z] [uploadQueue] Retrying task 2d91e76f27524fa032f02d4c514fe3d9b4a46c1e2e35d94224e223c79ea2187e
+[debug] [2019-05-26T23:25:14.494Z] [uploadQueue] Retrying task 0355cfaea7d957be674d1a94c22f0c043d7bd24c853a758fa932cb040f9505bb
+[debug] [2019-05-26T23:25:14.498Z] [uploadQueue] Retrying task 9896c41660a7256020d2a5657a1322be6b37587b2202c0b66f516fe0cb96627a
+[debug] [2019-05-26T23:25:14.502Z] [uploadQueue] Retrying task 19308217de5bb43149d0c9cb1b7ebd37347b42a95f524e749b2cba03ee8d3a3f
+[debug] [2019-05-26T23:25:14.531Z] [uploadQueue] Retrying task fa29f93fa7afca7e8cd3b666a1a9a7ed58bc828afd15b53c5ce8b6d6f54f38ac
+[debug] [2019-05-26T23:25:14.533Z] [uploadQueue] Retrying task 9431d730b3a122fa91571737c5d6c96443004551643a8c6f6ef7661cefd73a0e
+[debug] [2019-05-26T23:25:14.535Z] [uploadQueue] Retrying task cad5401fe6f082566713bed008a57209fe87aeea83a2e28d48acfe7f99aec36a
+[debug] [2019-05-26T23:25:14.537Z] [uploadQueue] Retrying task f21030401989191216272619dfbcd8f7fab1abe02a1610fcaacaa2f3d8857fe5
+[debug] [2019-05-26T23:25:14.549Z] [uploadQueue] Retrying task 4912ee4c38af7e8c3c6324bf52286b82103a5d2f5aca04b61a3434efda445702
+[debug] [2019-05-26T23:25:14.551Z] [uploadQueue] Retrying task 68d00994d1b5399bd4c73cef61dd32290f4f786bf104ab9b2d8275c42977db5f
+[debug] [2019-05-26T23:25:14.553Z] [uploadQueue] Retrying task e5adc496307cde6da4657acb1060de29ce8e376096f3c733297ee94720878e20
+[debug] [2019-05-26T23:25:14.559Z] [uploadQueue] Retrying task 3d023de7fc389508b9fa3d12b1e5aabf3c373b3c6c9c157cbeaaf6f4bc792403
+[debug] [2019-05-26T23:25:14.561Z] [uploadQueue] Retrying task 5a7f8694bce670243a05dca6db1b4d11f6ccff662ec4503e73c40e71d112b0c2
+[debug] [2019-05-26T23:25:14.563Z] [uploadQueue] Retrying task 173bfb01859cfd71ac0f69c9ff4933ea678976f6c83aa6e6855e00ae89550e77
+[debug] [2019-05-26T23:25:14.567Z] [uploadQueue] Retrying task 73bdcbb3bfdfef02d8bcbef7685d262bf70ae9e585be2f60e285746a163b79f6
+[debug] [2019-05-26T23:25:14.569Z] [uploadQueue] Retrying task add833e8f8e99435d30e0246f72c7b499f89ac0ba05bcf0039f6d504a0b83562
+[debug] [2019-05-26T23:25:14.571Z] [uploadQueue] Retrying task 180a501ca1023536fd246f6564cf609a51ed2e3abd841042918544a301b147fd
+[debug] [2019-05-26T23:25:14.577Z] [uploadQueue] Retrying task 22dc5af7ecdf7efe5001151fe446e4100b85ae79276abd0bc2f56dcbe2b3fd68
+[debug] [2019-05-26T23:25:14.579Z] [uploadQueue] Retrying task 4530fee86102b87d9cd85052818e6f5a4b0cb2cdbf7907d4f6312eb05c7a9e13
+[debug] [2019-05-26T23:25:14.581Z] [uploadQueue] Retrying task 15deab7b5a1676b1090039532118da1c02bbf75f97f299004782e478261e3587
+[debug] [2019-05-26T23:25:14.582Z] [uploadQueue] Retrying task 03e4d730b69ee593e1b318a673d11d83e7dcf3863b2e032c5ee06fff5adec82a
+[debug] [2019-05-26T23:25:14.597Z] [uploadQueue] Retrying task 748f4c1de8c29b65ff7922465de73888635523f2bf478c00118dcc8733f1d47c
+[debug] [2019-05-26T23:25:14.599Z] [uploadQueue] Retrying task 773dd4e9c8418e77e4b7061a68439d79f637a4bdb31ad4cdb6dfcea7118a6e0a
+[debug] [2019-05-26T23:25:14.601Z] [uploadQueue] Retrying task cd9584f1e3dc89ff9d1ac6a0f556daf5d86d2f37d1696f376299f8f02ca16c34
+[debug] [2019-05-26T23:25:14.604Z] [uploadQueue] Retrying task 65e632abef7ee7f585b70d6f8ecd4f124e9ff542f8ad6aa8ef886f47ecefdac3
+[debug] [2019-05-26T23:25:14.610Z] [uploadQueue] Retrying task 113b971f67dc81a5361953cc3da412017342049c5dd20ebe6d06529857464585
+[debug] [2019-05-26T23:25:14.612Z] [uploadQueue] Retrying task c2ea5fb2ae11dcb80c4692cd2fd2c01fa50001efed1a5ee928fc124fd5a1753e
+[debug] [2019-05-26T23:25:14.615Z] [uploadQueue] Retrying task 75d648177a01dcc46f4f8b0ab8296afb4994fdd54f5b3124692a7ed760b7c110
+[debug] [2019-05-26T23:25:14.617Z] [uploadQueue] Retrying task a6df138fa55f43634331a9565aee51bd5054f22cd779c6b87e2f5cd708f8fbb3
+[debug] [2019-05-26T23:25:14.628Z] [uploadQueue] Retrying task 3c64f074f76e8a5e0411bdfa7c60e587886d80e99f4419f4bc6f1404f32531a6
+[debug] [2019-05-26T23:25:14.629Z] [uploadQueue] Retrying task f5cbd2c3f3d99b061f715238e8f3ce34bf35a71ff63fa41e937fd3fc5e09de04
+[debug] [2019-05-26T23:25:14.630Z] [uploadQueue] Retrying task a22bd18ed7c2ceb39d97c93e8929a021083d35c5d118e054272f185cacbb09b0
+[debug] [2019-05-26T23:25:14.658Z] [uploadQueue] Retrying task 74182f3cd90b359115bc5411a70c8ac37cb220360ce8d5a1bb6b2cc8d024cf0e
+[debug] [2019-05-26T23:25:14.661Z] [uploadQueue] Retrying task 1944f5ec3baceba2be9323cef9c2576878d6923b9f0fdaf544d2d065c4bc2a06
+[debug] [2019-05-26T23:25:14.662Z] [uploadQueue] Retrying task 0c4f8b4b518f3d34360264caefdc245688fde221ebf90c67e6937e930cbff0c4
+[debug] [2019-05-26T23:25:14.665Z] [uploadQueue] Retrying task 84608c149ba6f08635b9d0a6e0eeb181f11bbbeece69050a537c722d4b98ebdb
+[debug] [2019-05-26T23:25:14.675Z] [uploadQueue] Retrying task 0eba42d2ee630febb2280a1d52eea2dcb298aa4e3d0c505310ca23750d4029dc
+[debug] [2019-05-26T23:25:14.677Z] [uploadQueue] Retrying task 3d7a808c698e5787123f4bf3fea3f8220c8e2a6642058d30ffd6887695e08a81
+[debug] [2019-05-26T23:25:14.678Z] [uploadQueue] Retrying task f2f05489982ca033731ba993459a7ecaf3e6485a33fc3552ef2033a62ee2cf6e
+[debug] [2019-05-26T23:25:14.695Z] [uploadQueue] Retrying task 3a448ec57bb4df02629b485ac29b3abc1de6c6c8b787c59c48060fcdec0df785
+[debug] [2019-05-26T23:25:14.696Z] [uploadQueue] Retrying task 3bd01fbf47f240a0c18205ba16e9a9142990917b2c04a188d625fd84e5bdb208
+[debug] [2019-05-26T23:25:14.699Z] [uploadQueue] Retrying task 1cd9b9e3a5cc15c2c3159c31621965c79acf3e740f2c00f4ac69c0998afdf2c6
+[debug] [2019-05-26T23:25:14.701Z] [uploadQueue] Retrying task 6f52f8d4f98b7722db9e65a6d01e6f1325908ffda679e9bccc442fd45ffdd80c
+[debug] [2019-05-26T23:25:14.713Z] [uploadQueue] Retrying task ac05b1d89aa5df68b1e148324e6e6efdc7f464e5c50a4a716a895b957ed3d6e3
+[debug] [2019-05-26T23:25:14.715Z] [uploadQueue] Retrying task b402294d889f0c565229a1d3fdb70f94580a9a6bc36a69bea0c29b93ed659e1b
+[debug] [2019-05-26T23:25:14.718Z] [uploadQueue] Retrying task b246fe9399b9c58c49e4141c0fa238a79f2a6e9a4a768b028f861a8bb8b0844a
+[debug] [2019-05-26T23:25:14.719Z] [uploadQueue] Retrying task 61d272085309498279816f59e28fd46d168a43b137c36327c548510bef58e4f9
+[debug] [2019-05-26T23:25:14.720Z] [uploadQueue] Retrying task 6d416df449d2a5254b6e188cbbac81653edede925ac794e927594a6d8d31339a
+[debug] [2019-05-26T23:25:14.720Z] [uploadQueue] Retrying task 5ffca12c57e7e5ba75a200bdaab89fb789e24da1b801cae4d40ccd85720e8eb8
+[debug] [2019-05-26T23:25:14.758Z] [uploadQueue] Retrying task 4eedb328824ee9e3ec6a6068201fbd77d286a802046438c36e5fa94074e46255
+[debug] [2019-05-26T23:25:14.762Z] [uploadQueue] Retrying task 282519b3e91367b6aebd59e84232ecbca64dad8e57a8113b7ce35a185711f3b6
+[debug] [2019-05-26T23:25:18.568Z] [uploadQueue] Retrying task a9c736f13b97381517ea29787c8b3862d150f5a9ad367724dd1b29374026a22c
+[debug] [2019-05-26T23:25:20.665Z] [uploadQueue] Retrying task 18c2035e1ac0e8bd7d4c0d90a7ce38656c085199b29f47c388c41aad06509851
+[debug] [2019-05-26T23:25:22.488Z] [uploadQueue] Retrying task 68022e2e0daca4b81676acbcdfd4461832e1a22a3149ab8e24b8b0cf3cbc910e
+[debug] [2019-05-26T23:25:28.594Z] [uploadQueue] Retrying task a0e139ba4c240b6fd1f6f2dc07d4def0b734420ee21f92a12e7d3058f1f6aa4f
+[debug] [2019-05-26T23:25:31.902Z] [uploadQueue] Retrying task 0e8383d7c977a6e7d0ad8c3be49c4e0a77b8753adb46e5f306a891d63c8c80b1
+[debug] [2019-05-26T23:25:46.017Z] [uploadQueue] Retrying task c399f82bbb5418159afd05732eebcef781eb3e7316833f16ce0fc664b63c34ff
+[debug] [2019-05-26T23:25:46.021Z] [uploadQueue] Retrying task e9beb800da5f3601341c7f5d9ae1af549eb6e99412b4eb92f79d07d359767e0c
+[debug] [2019-05-26T23:25:46.119Z] [uploadQueue] Retrying task 0d8a300f3940dedd7502b2172fec95e947d3c7b45cd0ea62a302f05682b81ccf
+[debug] [2019-05-26T23:25:46.122Z] [uploadQueue] Retrying task bee3c228ac8fb4fedbb45b3e6ceb2c25148a21bbf47ef8bda4dea4e784ee30fc
+[debug] [2019-05-26T23:25:46.129Z] [uploadQueue] Retrying task 2d91e76f27524fa032f02d4c514fe3d9b4a46c1e2e35d94224e223c79ea2187e
+[debug] [2019-05-26T23:25:46.137Z] [uploadQueue] Retrying task 0355cfaea7d957be674d1a94c22f0c043d7bd24c853a758fa932cb040f9505bb
+[debug] [2019-05-26T23:25:46.189Z] [uploadQueue] Retrying task 9896c41660a7256020d2a5657a1322be6b37587b2202c0b66f516fe0cb96627a
+[debug] [2019-05-26T23:25:46.200Z] [uploadQueue] Retrying task 19308217de5bb43149d0c9cb1b7ebd37347b42a95f524e749b2cba03ee8d3a3f
+[debug] [2019-05-26T23:25:46.237Z] [uploadQueue] Retrying task fa29f93fa7afca7e8cd3b666a1a9a7ed58bc828afd15b53c5ce8b6d6f54f38ac
+[debug] [2019-05-26T23:25:46.240Z] [uploadQueue] Retrying task 9431d730b3a122fa91571737c5d6c96443004551643a8c6f6ef7661cefd73a0e
+[debug] [2019-05-26T23:25:46.243Z] [uploadQueue] Retrying task cad5401fe6f082566713bed008a57209fe87aeea83a2e28d48acfe7f99aec36a
+[debug] [2019-05-26T23:25:46.247Z] [uploadQueue] Retrying task f21030401989191216272619dfbcd8f7fab1abe02a1610fcaacaa2f3d8857fe5
+[debug] [2019-05-26T23:25:46.257Z] [uploadQueue] Retrying task 4912ee4c38af7e8c3c6324bf52286b82103a5d2f5aca04b61a3434efda445702
+[debug] [2019-05-26T23:25:46.259Z] [uploadQueue] Retrying task 68d00994d1b5399bd4c73cef61dd32290f4f786bf104ab9b2d8275c42977db5f
+[debug] [2019-05-26T23:25:46.262Z] [uploadQueue] Retrying task e5adc496307cde6da4657acb1060de29ce8e376096f3c733297ee94720878e20
+[debug] [2019-05-26T23:25:46.270Z] [uploadQueue] Retrying task 3d023de7fc389508b9fa3d12b1e5aabf3c373b3c6c9c157cbeaaf6f4bc792403
+[debug] [2019-05-26T23:25:46.275Z] [uploadQueue] Retrying task 5a7f8694bce670243a05dca6db1b4d11f6ccff662ec4503e73c40e71d112b0c2
+[debug] [2019-05-26T23:25:46.277Z] [uploadQueue] Retrying task 173bfb01859cfd71ac0f69c9ff4933ea678976f6c83aa6e6855e00ae89550e77
+[debug] [2019-05-26T23:25:46.334Z] [uploadQueue] Retrying task 73bdcbb3bfdfef02d8bcbef7685d262bf70ae9e585be2f60e285746a163b79f6
+[debug] [2019-05-26T23:25:46.335Z] [uploadQueue] Retrying task 180a501ca1023536fd246f6564cf609a51ed2e3abd841042918544a301b147fd
+[debug] [2019-05-26T23:25:46.339Z] [uploadQueue] Retrying task 22dc5af7ecdf7efe5001151fe446e4100b85ae79276abd0bc2f56dcbe2b3fd68
+[debug] [2019-05-26T23:25:46.340Z] [uploadQueue] Retrying task 4530fee86102b87d9cd85052818e6f5a4b0cb2cdbf7907d4f6312eb05c7a9e13
+[debug] [2019-05-26T23:25:46.351Z] [uploadQueue] Retrying task 15deab7b5a1676b1090039532118da1c02bbf75f97f299004782e478261e3587
+[debug] [2019-05-26T23:25:46.352Z] [uploadQueue] Retrying task 03e4d730b69ee593e1b318a673d11d83e7dcf3863b2e032c5ee06fff5adec82a
+[debug] [2019-05-26T23:25:46.355Z] [uploadQueue] Retrying task add833e8f8e99435d30e0246f72c7b499f89ac0ba05bcf0039f6d504a0b83562
+[debug] [2019-05-26T23:25:46.371Z] [uploadQueue] Retrying task 773dd4e9c8418e77e4b7061a68439d79f637a4bdb31ad4cdb6dfcea7118a6e0a
+[debug] [2019-05-26T23:25:46.382Z] [uploadQueue] Retrying task cd9584f1e3dc89ff9d1ac6a0f556daf5d86d2f37d1696f376299f8f02ca16c34
+[debug] [2019-05-26T23:25:46.384Z] [uploadQueue] Retrying task 65e632abef7ee7f585b70d6f8ecd4f124e9ff542f8ad6aa8ef886f47ecefdac3
+[debug] [2019-05-26T23:25:46.385Z] [uploadQueue] Retrying task 748f4c1de8c29b65ff7922465de73888635523f2bf478c00118dcc8733f1d47c
+[debug] [2019-05-26T23:25:46.386Z] [uploadQueue] Retrying task c2ea5fb2ae11dcb80c4692cd2fd2c01fa50001efed1a5ee928fc124fd5a1753e
+[debug] [2019-05-26T23:25:46.389Z] [uploadQueue] Retrying task 75d648177a01dcc46f4f8b0ab8296afb4994fdd54f5b3124692a7ed760b7c110
+[debug] [2019-05-26T23:25:46.393Z] [uploadQueue] Retrying task 113b971f67dc81a5361953cc3da412017342049c5dd20ebe6d06529857464585
+[debug] [2019-05-26T23:25:46.394Z] [uploadQueue] Retrying task a6df138fa55f43634331a9565aee51bd5054f22cd779c6b87e2f5cd708f8fbb3
+[debug] [2019-05-26T23:25:46.399Z] [uploadQueue] Retrying task 3c64f074f76e8a5e0411bdfa7c60e587886d80e99f4419f4bc6f1404f32531a6
+[debug] [2019-05-26T23:25:46.401Z] [uploadQueue] Retrying task f5cbd2c3f3d99b061f715238e8f3ce34bf35a71ff63fa41e937fd3fc5e09de04
+[debug] [2019-05-26T23:25:46.405Z] [uploadQueue] Retrying task a22bd18ed7c2ceb39d97c93e8929a021083d35c5d118e054272f185cacbb09b0
+[debug] [2019-05-26T23:25:46.406Z] [uploadQueue] Retrying task 74182f3cd90b359115bc5411a70c8ac37cb220360ce8d5a1bb6b2cc8d024cf0e
+[debug] [2019-05-26T23:25:46.411Z] [uploadQueue] Retrying task 1944f5ec3baceba2be9323cef9c2576878d6923b9f0fdaf544d2d065c4bc2a06
+[debug] [2019-05-26T23:25:46.420Z] [uploadQueue] Retrying task 0c4f8b4b518f3d34360264caefdc245688fde221ebf90c67e6937e930cbff0c4
+[debug] [2019-05-26T23:25:46.421Z] [uploadQueue] Retrying task 84608c149ba6f08635b9d0a6e0eeb181f11bbbeece69050a537c722d4b98ebdb
+[debug] [2019-05-26T23:25:46.422Z] [uploadQueue] Retrying task 0eba42d2ee630febb2280a1d52eea2dcb298aa4e3d0c505310ca23750d4029dc
+[debug] [2019-05-26T23:25:46.429Z] [uploadQueue] Retrying task f2f05489982ca033731ba993459a7ecaf3e6485a33fc3552ef2033a62ee2cf6e
+[debug] [2019-05-26T23:25:46.450Z] [uploadQueue] Retrying task 3d7a808c698e5787123f4bf3fea3f8220c8e2a6642058d30ffd6887695e08a81
+[debug] [2019-05-26T23:25:46.451Z] [uploadQueue] Retrying task 3bd01fbf47f240a0c18205ba16e9a9142990917b2c04a188d625fd84e5bdb208
+[debug] [2019-05-26T23:25:46.452Z] [uploadQueue] Retrying task 1cd9b9e3a5cc15c2c3159c31621965c79acf3e740f2c00f4ac69c0998afdf2c6
+[debug] [2019-05-26T23:25:46.456Z] [uploadQueue] Retrying task 6f52f8d4f98b7722db9e65a6d01e6f1325908ffda679e9bccc442fd45ffdd80c
+[debug] [2019-05-26T23:25:46.457Z] [uploadQueue] Retrying task ac05b1d89aa5df68b1e148324e6e6efdc7f464e5c50a4a716a895b957ed3d6e3
+[debug] [2019-05-26T23:25:46.458Z] [uploadQueue] Retrying task 3a448ec57bb4df02629b485ac29b3abc1de6c6c8b787c59c48060fcdec0df785
+[debug] [2019-05-26T23:25:46.459Z] [uploadQueue] Retrying task b246fe9399b9c58c49e4141c0fa238a79f2a6e9a4a768b028f861a8bb8b0844a
+[debug] [2019-05-26T23:25:46.460Z] [uploadQueue] Retrying task 61d272085309498279816f59e28fd46d168a43b137c36327c548510bef58e4f9
+[debug] [2019-05-26T23:25:46.461Z] [uploadQueue] Retrying task 6d416df449d2a5254b6e188cbbac81653edede925ac794e927594a6d8d31339a
+[debug] [2019-05-26T23:25:46.478Z] [uploadQueue] Retrying task 5ffca12c57e7e5ba75a200bdaab89fb789e24da1b801cae4d40ccd85720e8eb8
+[debug] [2019-05-26T23:25:46.479Z] [uploadQueue] Retrying task b402294d889f0c565229a1d3fdb70f94580a9a6bc36a69bea0c29b93ed659e1b
+[debug] [2019-05-26T23:25:46.508Z] [uploadQueue] Retrying task 282519b3e91367b6aebd59e84232ecbca64dad8e57a8113b7ce35a185711f3b6
+[debug] [2019-05-26T23:25:46.533Z] [uploadQueue] Retrying task 4eedb328824ee9e3ec6a6068201fbd77d286a802046438c36e5fa94074e46255
+[debug] [2019-05-26T23:25:50.202Z] [uploadQueue] Retrying task a9c736f13b97381517ea29787c8b3862d150f5a9ad367724dd1b29374026a22c
+[debug] [2019-05-26T23:25:52.339Z] [uploadQueue] Retrying task 18c2035e1ac0e8bd7d4c0d90a7ce38656c085199b29f47c388c41aad06509851
+[debug] [2019-05-26T23:25:54.144Z] [uploadQueue] Retrying task 68022e2e0daca4b81676acbcdfd4461832e1a22a3149ab8e24b8b0cf3cbc910e
+[debug] [2019-05-26T23:26:01.833Z] [uploadQueue] Retrying task a0e139ba4c240b6fd1f6f2dc07d4def0b734420ee21f92a12e7d3058f1f6aa4f
+[debug] [2019-05-26T23:26:12.310Z] [uploadQueue] Retrying task 0e8383d7c977a6e7d0ad8c3be49c4e0a77b8753adb46e5f306a891d63c8c80b1
+[debug] [2019-05-26T23:26:19.251Z] [uploadQueue] Retrying task c399f82bbb5418159afd05732eebcef781eb3e7316833f16ce0fc664b63c34ff
+[debug] [2019-05-26T23:26:19.264Z] [uploadQueue] Retrying task e9beb800da5f3601341c7f5d9ae1af549eb6e99412b4eb92f79d07d359767e0c
+[debug] [2019-05-26T23:26:19.331Z] [uploadQueue] Retrying task 0d8a300f3940dedd7502b2172fec95e947d3c7b45cd0ea62a302f05682b81ccf
+[debug] [2019-05-26T23:26:19.363Z] [uploadQueue] Retrying task bee3c228ac8fb4fedbb45b3e6ceb2c25148a21bbf47ef8bda4dea4e784ee30fc
+[debug] [2019-05-26T23:26:19.383Z] [uploadQueue] Retrying task 2d91e76f27524fa032f02d4c514fe3d9b4a46c1e2e35d94224e223c79ea2187e
+[debug] [2019-05-26T23:26:19.393Z] [uploadQueue] Retrying task 0355cfaea7d957be674d1a94c22f0c043d7bd24c853a758fa932cb040f9505bb
+[debug] [2019-05-26T23:26:19.437Z] [uploadQueue] Retrying task 19308217de5bb43149d0c9cb1b7ebd37347b42a95f524e749b2cba03ee8d3a3f
+[debug] [2019-05-26T23:26:19.445Z] [uploadQueue] Retrying task 9896c41660a7256020d2a5657a1322be6b37587b2202c0b66f516fe0cb96627a
+[debug] [2019-05-26T23:26:19.497Z] [uploadQueue] Retrying task fa29f93fa7afca7e8cd3b666a1a9a7ed58bc828afd15b53c5ce8b6d6f54f38ac
+[debug] [2019-05-26T23:26:19.509Z] [uploadQueue] Retrying task 9431d730b3a122fa91571737c5d6c96443004551643a8c6f6ef7661cefd73a0e
+[debug] [2019-05-26T23:26:19.512Z] [uploadQueue] Retrying task cad5401fe6f082566713bed008a57209fe87aeea83a2e28d48acfe7f99aec36a
+[debug] [2019-05-26T23:26:19.519Z] [uploadQueue] Retrying task f21030401989191216272619dfbcd8f7fab1abe02a1610fcaacaa2f3d8857fe5
+[debug] [2019-05-26T23:26:19.531Z] [uploadQueue] Retrying task 4912ee4c38af7e8c3c6324bf52286b82103a5d2f5aca04b61a3434efda445702
+[debug] [2019-05-26T23:26:19.533Z] [uploadQueue] Retrying task 68d00994d1b5399bd4c73cef61dd32290f4f786bf104ab9b2d8275c42977db5f
+[debug] [2019-05-26T23:26:19.534Z] [uploadQueue] Retrying task e5adc496307cde6da4657acb1060de29ce8e376096f3c733297ee94720878e20
+[debug] [2019-05-26T23:26:19.536Z] [uploadQueue] Retrying task 3d023de7fc389508b9fa3d12b1e5aabf3c373b3c6c9c157cbeaaf6f4bc792403
+[debug] [2019-05-26T23:26:19.546Z] [uploadQueue] Retrying task 5a7f8694bce670243a05dca6db1b4d11f6ccff662ec4503e73c40e71d112b0c2
+[debug] [2019-05-26T23:26:19.548Z] [uploadQueue] Retrying task 173bfb01859cfd71ac0f69c9ff4933ea678976f6c83aa6e6855e00ae89550e77
+[debug] [2019-05-26T23:26:19.558Z] [uploadQueue] Retrying task 73bdcbb3bfdfef02d8bcbef7685d262bf70ae9e585be2f60e285746a163b79f6
+[debug] [2019-05-26T23:26:19.578Z] [uploadQueue] Retrying task 180a501ca1023536fd246f6564cf609a51ed2e3abd841042918544a301b147fd
+[debug] [2019-05-26T23:26:19.579Z] [uploadQueue] Retrying task 22dc5af7ecdf7efe5001151fe446e4100b85ae79276abd0bc2f56dcbe2b3fd68
+[debug] [2019-05-26T23:26:19.580Z] [uploadQueue] Retrying task 4530fee86102b87d9cd85052818e6f5a4b0cb2cdbf7907d4f6312eb05c7a9e13
+[debug] [2019-05-26T23:26:19.581Z] [uploadQueue] Retrying task 15deab7b5a1676b1090039532118da1c02bbf75f97f299004782e478261e3587
+[debug] [2019-05-26T23:26:19.582Z] [uploadQueue] Retrying task 03e4d730b69ee593e1b318a673d11d83e7dcf3863b2e032c5ee06fff5adec82a
+[debug] [2019-05-26T23:26:19.588Z] [uploadQueue] Retrying task add833e8f8e99435d30e0246f72c7b499f89ac0ba05bcf0039f6d504a0b83562
+[debug] [2019-05-26T23:26:19.611Z] [uploadQueue] Retrying task 773dd4e9c8418e77e4b7061a68439d79f637a4bdb31ad4cdb6dfcea7118a6e0a
+[debug] [2019-05-26T23:26:19.624Z] [uploadQueue] Retrying task cd9584f1e3dc89ff9d1ac6a0f556daf5d86d2f37d1696f376299f8f02ca16c34
+[debug] [2019-05-26T23:26:19.627Z] [uploadQueue] Retrying task 65e632abef7ee7f585b70d6f8ecd4f124e9ff542f8ad6aa8ef886f47ecefdac3
+[debug] [2019-05-26T23:26:19.628Z] [uploadQueue] Retrying task c2ea5fb2ae11dcb80c4692cd2fd2c01fa50001efed1a5ee928fc124fd5a1753e
+[debug] [2019-05-26T23:26:19.629Z] [uploadQueue] Retrying task 75d648177a01dcc46f4f8b0ab8296afb4994fdd54f5b3124692a7ed760b7c110
+[debug] [2019-05-26T23:26:19.643Z] [uploadQueue] Retrying task 748f4c1de8c29b65ff7922465de73888635523f2bf478c00118dcc8733f1d47c
+[debug] [2019-05-26T23:26:19.647Z] [uploadQueue] Retrying task a6df138fa55f43634331a9565aee51bd5054f22cd779c6b87e2f5cd708f8fbb3
+[debug] [2019-05-26T23:26:19.648Z] [uploadQueue] Retrying task 3c64f074f76e8a5e0411bdfa7c60e587886d80e99f4419f4bc6f1404f32531a6
+[debug] [2019-05-26T23:26:19.649Z] [uploadQueue] Retrying task f5cbd2c3f3d99b061f715238e8f3ce34bf35a71ff63fa41e937fd3fc5e09de04
+[debug] [2019-05-26T23:26:19.650Z] [uploadQueue] Retrying task a22bd18ed7c2ceb39d97c93e8929a021083d35c5d118e054272f185cacbb09b0
+[debug] [2019-05-26T23:26:19.653Z] [uploadQueue] Retrying task 74182f3cd90b359115bc5411a70c8ac37cb220360ce8d5a1bb6b2cc8d024cf0e
+[debug] [2019-05-26T23:26:19.661Z] [uploadQueue] Retrying task 113b971f67dc81a5361953cc3da412017342049c5dd20ebe6d06529857464585
+[debug] [2019-05-26T23:26:19.670Z] [uploadQueue] Retrying task 1944f5ec3baceba2be9323cef9c2576878d6923b9f0fdaf544d2d065c4bc2a06
+[debug] [2019-05-26T23:26:19.675Z] [uploadQueue] Retrying task 0c4f8b4b518f3d34360264caefdc245688fde221ebf90c67e6937e930cbff0c4
+[debug] [2019-05-26T23:26:19.684Z] [uploadQueue] Retrying task 84608c149ba6f08635b9d0a6e0eeb181f11bbbeece69050a537c722d4b98ebdb
+[debug] [2019-05-26T23:26:19.685Z] [uploadQueue] Retrying task f2f05489982ca033731ba993459a7ecaf3e6485a33fc3552ef2033a62ee2cf6e
+[debug] [2019-05-26T23:26:19.686Z] [uploadQueue] Retrying task 0eba42d2ee630febb2280a1d52eea2dcb298aa4e3d0c505310ca23750d4029dc
+[debug] [2019-05-26T23:26:19.693Z] [uploadQueue] Retrying task 3d7a808c698e5787123f4bf3fea3f8220c8e2a6642058d30ffd6887695e08a81
+[debug] [2019-05-26T23:26:19.694Z] [uploadQueue] Retrying task 3bd01fbf47f240a0c18205ba16e9a9142990917b2c04a188d625fd84e5bdb208
+[debug] [2019-05-26T23:26:19.696Z] [uploadQueue] Retrying task 1cd9b9e3a5cc15c2c3159c31621965c79acf3e740f2c00f4ac69c0998afdf2c6
+[debug] [2019-05-26T23:26:19.714Z] [uploadQueue] Retrying task 6f52f8d4f98b7722db9e65a6d01e6f1325908ffda679e9bccc442fd45ffdd80c
+[debug] [2019-05-26T23:26:19.715Z] [uploadQueue] Retrying task ac05b1d89aa5df68b1e148324e6e6efdc7f464e5c50a4a716a895b957ed3d6e3
+[debug] [2019-05-26T23:26:19.716Z] [uploadQueue] Retrying task b246fe9399b9c58c49e4141c0fa238a79f2a6e9a4a768b028f861a8bb8b0844a
+[debug] [2019-05-26T23:26:19.740Z] [uploadQueue] Retrying task 61d272085309498279816f59e28fd46d168a43b137c36327c548510bef58e4f9
+[debug] [2019-05-26T23:26:19.743Z] [uploadQueue] Retrying task 6d416df449d2a5254b6e188cbbac81653edede925ac794e927594a6d8d31339a
+[debug] [2019-05-26T23:26:19.767Z] [uploadQueue] Retrying task 3a448ec57bb4df02629b485ac29b3abc1de6c6c8b787c59c48060fcdec0df785
+[debug] [2019-05-26T23:26:19.770Z] [uploadQueue] Retrying task 5ffca12c57e7e5ba75a200bdaab89fb789e24da1b801cae4d40ccd85720e8eb8
+[debug] [2019-05-26T23:26:19.779Z] [uploadQueue] Retrying task b402294d889f0c565229a1d3fdb70f94580a9a6bc36a69bea0c29b93ed659e1b
+[debug] [2019-05-26T23:26:19.794Z] [uploadQueue] Retrying task 282519b3e91367b6aebd59e84232ecbca64dad8e57a8113b7ce35a185711f3b6
+[debug] [2019-05-26T23:26:19.831Z] [uploadQueue] Retrying task 4eedb328824ee9e3ec6a6068201fbd77d286a802046438c36e5fa94074e46255
+[debug] [2019-05-26T23:26:23.470Z] [uploadQueue] Retrying task a9c736f13b97381517ea29787c8b3862d150f5a9ad367724dd1b29374026a22c
+[debug] [2019-05-26T23:26:25.565Z] [uploadQueue] Retrying task 18c2035e1ac0e8bd7d4c0d90a7ce38656c085199b29f47c388c41aad06509851
+[debug] [2019-05-26T23:26:27.383Z] [uploadQueue] Retrying task 68022e2e0daca4b81676acbcdfd4461832e1a22a3149ab8e24b8b0cf3cbc910e
+[debug] [2019-05-26T23:26:38.252Z] [uploadQueue] Retrying task a0e139ba4c240b6fd1f6f2dc07d4def0b734420ee21f92a12e7d3058f1f6aa4f
+[debug] [2019-05-26T23:26:55.890Z] [uploadQueue] Retrying task 9896c41660a7256020d2a5657a1322be6b37587b2202c0b66f516fe0cb96627a
+[debug] [2019-05-26T23:26:55.904Z] [uploadQueue] Retrying task fa29f93fa7afca7e8cd3b666a1a9a7ed58bc828afd15b53c5ce8b6d6f54f38ac
+[debug] [2019-05-26T23:26:55.925Z] [uploadQueue] Retrying task 9431d730b3a122fa91571737c5d6c96443004551643a8c6f6ef7661cefd73a0e
+[debug] [2019-05-26T23:26:55.959Z] [uploadQueue] Retrying task cad5401fe6f082566713bed008a57209fe87aeea83a2e28d48acfe7f99aec36a
+[debug] [2019-05-26T23:26:55.962Z] [uploadQueue] Retrying task f21030401989191216272619dfbcd8f7fab1abe02a1610fcaacaa2f3d8857fe5
+[debug] [2019-05-26T23:26:55.971Z] [uploadQueue] Retrying task 4912ee4c38af7e8c3c6324bf52286b82103a5d2f5aca04b61a3434efda445702
+[debug] [2019-05-26T23:26:55.975Z] [uploadQueue] Retrying task 68d00994d1b5399bd4c73cef61dd32290f4f786bf104ab9b2d8275c42977db5f
+[debug] [2019-05-26T23:26:55.996Z] [uploadQueue] Retrying task e5adc496307cde6da4657acb1060de29ce8e376096f3c733297ee94720878e20
+[debug] [2019-05-26T23:26:56.004Z] [uploadQueue] Retrying task 3d023de7fc389508b9fa3d12b1e5aabf3c373b3c6c9c157cbeaaf6f4bc792403
+[debug] [2019-05-26T23:26:56.007Z] [uploadQueue] Retrying task 5a7f8694bce670243a05dca6db1b4d11f6ccff662ec4503e73c40e71d112b0c2
+[debug] [2019-05-26T23:26:56.010Z] [uploadQueue] Retrying task 173bfb01859cfd71ac0f69c9ff4933ea678976f6c83aa6e6855e00ae89550e77
+[debug] [2019-05-26T23:26:56.026Z] [uploadQueue] Retrying task 73bdcbb3bfdfef02d8bcbef7685d262bf70ae9e585be2f60e285746a163b79f6
+[debug] [2019-05-26T23:26:56.028Z] [uploadQueue] Retrying task 180a501ca1023536fd246f6564cf609a51ed2e3abd841042918544a301b147fd
+[debug] [2019-05-26T23:26:56.029Z] [uploadQueue] Retrying task 22dc5af7ecdf7efe5001151fe446e4100b85ae79276abd0bc2f56dcbe2b3fd68
+[debug] [2019-05-26T23:26:56.034Z] [uploadQueue] Retrying task 4530fee86102b87d9cd85052818e6f5a4b0cb2cdbf7907d4f6312eb05c7a9e13
+[debug] [2019-05-26T23:26:56.035Z] [uploadQueue] Retrying task 15deab7b5a1676b1090039532118da1c02bbf75f97f299004782e478261e3587
+[debug] [2019-05-26T23:26:56.036Z] [uploadQueue] Retrying task 03e4d730b69ee593e1b318a673d11d83e7dcf3863b2e032c5ee06fff5adec82a
+[debug] [2019-05-26T23:26:56.037Z] [uploadQueue] Retrying task add833e8f8e99435d30e0246f72c7b499f89ac0ba05bcf0039f6d504a0b83562
+[debug] [2019-05-26T23:26:56.054Z] [uploadQueue] Retrying task 773dd4e9c8418e77e4b7061a68439d79f637a4bdb31ad4cdb6dfcea7118a6e0a
+[debug] [2019-05-26T23:26:56.055Z] [uploadQueue] Retrying task cd9584f1e3dc89ff9d1ac6a0f556daf5d86d2f37d1696f376299f8f02ca16c34
+[debug] [2019-05-26T23:26:56.074Z] [uploadQueue] Retrying task 65e632abef7ee7f585b70d6f8ecd4f124e9ff542f8ad6aa8ef886f47ecefdac3
+[debug] [2019-05-26T23:26:56.075Z] [uploadQueue] Retrying task c2ea5fb2ae11dcb80c4692cd2fd2c01fa50001efed1a5ee928fc124fd5a1753e
+[debug] [2019-05-26T23:26:56.076Z] [uploadQueue] Retrying task 75d648177a01dcc46f4f8b0ab8296afb4994fdd54f5b3124692a7ed760b7c110
+[debug] [2019-05-26T23:26:56.088Z] [uploadQueue] Retrying task 748f4c1de8c29b65ff7922465de73888635523f2bf478c00118dcc8733f1d47c
+[debug] [2019-05-26T23:26:56.089Z] [uploadQueue] Retrying task a6df138fa55f43634331a9565aee51bd5054f22cd779c6b87e2f5cd708f8fbb3
+[debug] [2019-05-26T23:26:56.090Z] [uploadQueue] Retrying task f5cbd2c3f3d99b061f715238e8f3ce34bf35a71ff63fa41e937fd3fc5e09de04
+[debug] [2019-05-26T23:26:56.091Z] [uploadQueue] Retrying task 3c64f074f76e8a5e0411bdfa7c60e587886d80e99f4419f4bc6f1404f32531a6
+[debug] [2019-05-26T23:26:56.091Z] [uploadQueue] Retrying task a22bd18ed7c2ceb39d97c93e8929a021083d35c5d118e054272f185cacbb09b0
+[debug] [2019-05-26T23:26:56.093Z] [uploadQueue] Retrying task 74182f3cd90b359115bc5411a70c8ac37cb220360ce8d5a1bb6b2cc8d024cf0e
+[debug] [2019-05-26T23:26:56.100Z] [uploadQueue] Retrying task 113b971f67dc81a5361953cc3da412017342049c5dd20ebe6d06529857464585
+[debug] [2019-05-26T23:26:56.112Z] [uploadQueue] Retrying task 1944f5ec3baceba2be9323cef9c2576878d6923b9f0fdaf544d2d065c4bc2a06
+[debug] [2019-05-26T23:26:56.116Z] [uploadQueue] Retrying task 0c4f8b4b518f3d34360264caefdc245688fde221ebf90c67e6937e930cbff0c4
+[debug] [2019-05-26T23:26:56.152Z] [uploadQueue] Retrying task 84608c149ba6f08635b9d0a6e0eeb181f11bbbeece69050a537c722d4b98ebdb
+[debug] [2019-05-26T23:26:56.153Z] [uploadQueue] Retrying task f2f05489982ca033731ba993459a7ecaf3e6485a33fc3552ef2033a62ee2cf6e
+[debug] [2019-05-26T23:26:56.168Z] [uploadQueue] Retrying task 0eba42d2ee630febb2280a1d52eea2dcb298aa4e3d0c505310ca23750d4029dc
+[debug] [2019-05-26T23:26:56.178Z] [uploadQueue] Retrying task 3bd01fbf47f240a0c18205ba16e9a9142990917b2c04a188d625fd84e5bdb208
+[debug] [2019-05-26T23:26:56.179Z] [uploadQueue] Retrying task 1cd9b9e3a5cc15c2c3159c31621965c79acf3e740f2c00f4ac69c0998afdf2c6
+[debug] [2019-05-26T23:26:56.185Z] [uploadQueue] Retrying task 3d7a808c698e5787123f4bf3fea3f8220c8e2a6642058d30ffd6887695e08a81
+[debug] [2019-05-26T23:26:56.188Z] [uploadQueue] Retrying task 6f52f8d4f98b7722db9e65a6d01e6f1325908ffda679e9bccc442fd45ffdd80c
+[debug] [2019-05-26T23:26:56.189Z] [uploadQueue] Retrying task ac05b1d89aa5df68b1e148324e6e6efdc7f464e5c50a4a716a895b957ed3d6e3
+[debug] [2019-05-26T23:26:56.190Z] [uploadQueue] Retrying task b246fe9399b9c58c49e4141c0fa238a79f2a6e9a4a768b028f861a8bb8b0844a
+[debug] [2019-05-26T23:26:56.190Z] [uploadQueue] Retrying task 61d272085309498279816f59e28fd46d168a43b137c36327c548510bef58e4f9
+[debug] [2019-05-26T23:26:56.192Z] [uploadQueue] Retrying task 6d416df449d2a5254b6e188cbbac81653edede925ac794e927594a6d8d31339a
+[debug] [2019-05-26T23:26:56.209Z] [uploadQueue] Retrying task 3a448ec57bb4df02629b485ac29b3abc1de6c6c8b787c59c48060fcdec0df785
+[debug] [2019-05-26T23:26:56.225Z] [uploadQueue] Retrying task 5ffca12c57e7e5ba75a200bdaab89fb789e24da1b801cae4d40ccd85720e8eb8
+[debug] [2019-05-26T23:26:56.228Z] [uploadQueue] Retrying task b402294d889f0c565229a1d3fdb70f94580a9a6bc36a69bea0c29b93ed659e1b
+[debug] [2019-05-26T23:26:56.255Z] [uploadQueue] Retrying task 282519b3e91367b6aebd59e84232ecbca64dad8e57a8113b7ce35a185711f3b6
+[debug] [2019-05-26T23:26:56.327Z] [uploadQueue] Retrying task 4eedb328824ee9e3ec6a6068201fbd77d286a802046438c36e5fa94074e46255
+[debug] [2019-05-26T23:26:59.907Z] [uploadQueue] Retrying task a9c736f13b97381517ea29787c8b3862d150f5a9ad367724dd1b29374026a22c
+[debug] [2019-05-26T23:27:02.030Z] [uploadQueue] Retrying task 18c2035e1ac0e8bd7d4c0d90a7ce38656c085199b29f47c388c41aad06509851
+[debug] [2019-05-26T23:27:03.808Z] [uploadQueue] Retrying task 68022e2e0daca4b81676acbcdfd4461832e1a22a3149ab8e24b8b0cf3cbc910e
+[debug] [2019-05-26T23:27:08.314Z] [uploadQueue] Retries exhausted for task a0e139ba4c240b6fd1f6f2dc07d4def0b734420ee21f92a12e7d3058f1f6aa4f:
+[debug] [2019-05-26T23:27:08.322Z] [hosting][upload queue][FINAL]
+[debug] [2019-05-26T23:27:26.026Z] [uploadQueue] Retries exhausted for task 4912ee4c38af7e8c3c6324bf52286b82103a5d2f5aca04b61a3434efda445702:
+[debug] [2019-05-26T23:27:26.046Z] [uploadQueue] Retries exhausted for task 68d00994d1b5399bd4c73cef61dd32290f4f786bf104ab9b2d8275c42977db5f:
+[debug] [2019-05-26T23:27:26.050Z] [uploadQueue] Retries exhausted for task e5adc496307cde6da4657acb1060de29ce8e376096f3c733297ee94720878e20:
+[debug] [2019-05-26T23:27:26.052Z] [uploadQueue] Retries exhausted for task 3d023de7fc389508b9fa3d12b1e5aabf3c373b3c6c9c157cbeaaf6f4bc792403:
+[debug] [2019-05-26T23:27:26.055Z] [uploadQueue] Retries exhausted for task 5a7f8694bce670243a05dca6db1b4d11f6ccff662ec4503e73c40e71d112b0c2:
+[debug] [2019-05-26T23:27:26.061Z] [uploadQueue] Retries exhausted for task 173bfb01859cfd71ac0f69c9ff4933ea678976f6c83aa6e6855e00ae89550e77:
+[debug] [2019-05-26T23:27:26.063Z] [uploadQueue] Retries exhausted for task 73bdcbb3bfdfef02d8bcbef7685d262bf70ae9e585be2f60e285746a163b79f6:
+[debug] [2019-05-26T23:27:26.069Z] [uploadQueue] Retries exhausted for task 22dc5af7ecdf7efe5001151fe446e4100b85ae79276abd0bc2f56dcbe2b3fd68:
+[debug] [2019-05-26T23:27:26.083Z] [uploadQueue] Retries exhausted for task 180a501ca1023536fd246f6564cf609a51ed2e3abd841042918544a301b147fd:
+[debug] [2019-05-26T23:27:26.083Z] [uploadQueue] Retries exhausted for task 4530fee86102b87d9cd85052818e6f5a4b0cb2cdbf7907d4f6312eb05c7a9e13:
+[debug] [2019-05-26T23:27:26.084Z] [uploadQueue] Retries exhausted for task 15deab7b5a1676b1090039532118da1c02bbf75f97f299004782e478261e3587:
+[debug] [2019-05-26T23:27:26.085Z] [uploadQueue] Retries exhausted for task 03e4d730b69ee593e1b318a673d11d83e7dcf3863b2e032c5ee06fff5adec82a:
+[debug] [2019-05-26T23:27:26.094Z] [uploadQueue] Retries exhausted for task add833e8f8e99435d30e0246f72c7b499f89ac0ba05bcf0039f6d504a0b83562:
+[debug] [2019-05-26T23:27:26.108Z] [uploadQueue] Retries exhausted for task 773dd4e9c8418e77e4b7061a68439d79f637a4bdb31ad4cdb6dfcea7118a6e0a:
+[debug] [2019-05-26T23:27:26.110Z] [uploadQueue] Retries exhausted for task cd9584f1e3dc89ff9d1ac6a0f556daf5d86d2f37d1696f376299f8f02ca16c34:
+[debug] [2019-05-26T23:27:26.113Z] [uploadQueue] Retries exhausted for task 65e632abef7ee7f585b70d6f8ecd4f124e9ff542f8ad6aa8ef886f47ecefdac3:
+[debug] [2019-05-26T23:27:26.114Z] [uploadQueue] Retries exhausted for task c2ea5fb2ae11dcb80c4692cd2fd2c01fa50001efed1a5ee928fc124fd5a1753e:
+[debug] [2019-05-26T23:27:26.115Z] [uploadQueue] Retries exhausted for task 75d648177a01dcc46f4f8b0ab8296afb4994fdd54f5b3124692a7ed760b7c110:
+[debug] [2019-05-26T23:27:26.124Z] [uploadQueue] Retries exhausted for task a6df138fa55f43634331a9565aee51bd5054f22cd779c6b87e2f5cd708f8fbb3:
+[debug] [2019-05-26T23:27:26.127Z] [uploadQueue] Retries exhausted for task f5cbd2c3f3d99b061f715238e8f3ce34bf35a71ff63fa41e937fd3fc5e09de04:
+[debug] [2019-05-26T23:27:26.130Z] [uploadQueue] Retries exhausted for task 3c64f074f76e8a5e0411bdfa7c60e587886d80e99f4419f4bc6f1404f32531a6:
+[debug] [2019-05-26T23:27:26.131Z] [uploadQueue] Retries exhausted for task 748f4c1de8c29b65ff7922465de73888635523f2bf478c00118dcc8733f1d47c:
+[debug] [2019-05-26T23:27:26.132Z] [uploadQueue] Retries exhausted for task a22bd18ed7c2ceb39d97c93e8929a021083d35c5d118e054272f185cacbb09b0:
+[debug] [2019-05-26T23:27:26.141Z] [uploadQueue] Retries exhausted for task 74182f3cd90b359115bc5411a70c8ac37cb220360ce8d5a1bb6b2cc8d024cf0e:
+[debug] [2019-05-26T23:27:26.144Z] [uploadQueue] Retries exhausted for task 113b971f67dc81a5361953cc3da412017342049c5dd20ebe6d06529857464585:
+[debug] [2019-05-26T23:27:26.148Z] [uploadQueue] Retries exhausted for task 1944f5ec3baceba2be9323cef9c2576878d6923b9f0fdaf544d2d065c4bc2a06:
+[debug] [2019-05-26T23:27:26.152Z] [uploadQueue] Retries exhausted for task 0c4f8b4b518f3d34360264caefdc245688fde221ebf90c67e6937e930cbff0c4:
+[debug] [2019-05-26T23:27:26.159Z] [uploadQueue] Retries exhausted for task 84608c149ba6f08635b9d0a6e0eeb181f11bbbeece69050a537c722d4b98ebdb:
+[debug] [2019-05-26T23:27:26.161Z] [uploadQueue] Retries exhausted for task f2f05489982ca033731ba993459a7ecaf3e6485a33fc3552ef2033a62ee2cf6e:
+[debug] [2019-05-26T23:27:26.179Z] [uploadQueue] Retries exhausted for task 0eba42d2ee630febb2280a1d52eea2dcb298aa4e3d0c505310ca23750d4029dc:
+[debug] [2019-05-26T23:27:26.186Z] [uploadQueue] Retries exhausted for task 3bd01fbf47f240a0c18205ba16e9a9142990917b2c04a188d625fd84e5bdb208:
+[debug] [2019-05-26T23:27:26.193Z] [uploadQueue] Retries exhausted for task 1cd9b9e3a5cc15c2c3159c31621965c79acf3e740f2c00f4ac69c0998afdf2c6:
+[debug] [2019-05-26T23:27:26.209Z] [uploadQueue] Retries exhausted for task 6f52f8d4f98b7722db9e65a6d01e6f1325908ffda679e9bccc442fd45ffdd80c:
+[debug] [2019-05-26T23:27:26.211Z] [uploadQueue] Retries exhausted for task ac05b1d89aa5df68b1e148324e6e6efdc7f464e5c50a4a716a895b957ed3d6e3:
+[debug] [2019-05-26T23:27:26.214Z] [uploadQueue] Retries exhausted for task b246fe9399b9c58c49e4141c0fa238a79f2a6e9a4a768b028f861a8bb8b0844a:
+[debug] [2019-05-26T23:27:26.215Z] [uploadQueue] Retries exhausted for task 61d272085309498279816f59e28fd46d168a43b137c36327c548510bef58e4f9:
+[debug] [2019-05-26T23:27:26.220Z] [uploadQueue] Retries exhausted for task 3d7a808c698e5787123f4bf3fea3f8220c8e2a6642058d30ffd6887695e08a81:
+[debug] [2019-05-26T23:27:26.221Z] [uploadQueue] Retries exhausted for task 6d416df449d2a5254b6e188cbbac81653edede925ac794e927594a6d8d31339a:
+[debug] [2019-05-26T23:27:26.228Z] [uploadQueue] Retries exhausted for task 3a448ec57bb4df02629b485ac29b3abc1de6c6c8b787c59c48060fcdec0df785:
+[debug] [2019-05-26T23:27:26.237Z] [uploadQueue] Retries exhausted for task 5ffca12c57e7e5ba75a200bdaab89fb789e24da1b801cae4d40ccd85720e8eb8:
+[debug] [2019-05-26T23:27:26.275Z] [uploadQueue] Retries exhausted for task b402294d889f0c565229a1d3fdb70f94580a9a6bc36a69bea0c29b93ed659e1b:
+[debug] [2019-05-26T23:27:26.309Z] [uploadQueue] Retries exhausted for task 282519b3e91367b6aebd59e84232ecbca64dad8e57a8113b7ce35a185711f3b6:
+[debug] [2019-05-26T23:27:26.377Z] [uploadQueue] Retries exhausted for task 4eedb328824ee9e3ec6a6068201fbd77d286a802046438c36e5fa94074e46255:
+[debug] [2019-05-26T23:27:29.927Z] [uploadQueue] Retries exhausted for task a9c736f13b97381517ea29787c8b3862d150f5a9ad367724dd1b29374026a22c:
+[debug] [2019-05-26T23:27:32.087Z] [uploadQueue] Retries exhausted for task 18c2035e1ac0e8bd7d4c0d90a7ce38656c085199b29f47c388c41aad06509851:
+[debug] [2019-05-26T23:27:33.900Z] [uploadQueue] Retries exhausted for task 68022e2e0daca4b81676acbcdfd4461832e1a22a3149ab8e24b8b0cf3cbc910e:
+[debug] [2019-05-26T23:27:54.601Z] [uploadQueue] Retries exhausted for task cad5401fe6f082566713bed008a57209fe87aeea83a2e28d48acfe7f99aec36a:
+[debug] [2019-05-26T23:27:54.667Z] [uploadQueue] Retries exhausted for task 9896c41660a7256020d2a5657a1322be6b37587b2202c0b66f516fe0cb96627a:
+[debug] [2019-05-26T23:28:01.103Z] Error: ETIMEDOUT
+    at Timeout._onTimeout (/home/jay/.nvm/versions/node/v12.2.0/lib/node_modules/firebase-tools/node_modules/request/request.js:849:19)
+    at listOnTimeout (internal/timers.js:531:17)
+    at processTimers (internal/timers.js:475:7)
+[error] 
+[error] Error: An unexpected error has occurred.
