@@ -1,0 +1,25 @@
+[debug] [2019-05-26T23:14:01.001Z] ----------------------------------------------------------------------
+[debug] [2019-05-26T23:14:01.006Z] Command:       /home/jay/.nvm/versions/node/v12.2.0/bin/node /home/jay/.nvm/versions/node/v12.2.0/bin/firebase serve
+[debug] [2019-05-26T23:14:01.006Z] CLI Version:   6.10.0
+[debug] [2019-05-26T23:14:01.007Z] Platform:      linux
+[debug] [2019-05-26T23:14:01.007Z] Node Version:  v12.2.0
+[debug] [2019-05-26T23:14:01.585Z] Time:          Sun May 26 2019 15:14:01 GMT-0800 (GMT-08:00)
+[debug] [2019-05-26T23:14:01.585Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-26T23:14:01.610Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-26T23:14:01.611Z] > authorizing via signed-in user
+[debug] [2019-05-26T23:14:01.612Z] [iam] checking project wmr-staging for permissions ["firebase.projects.get"]
+[debug] [2019-05-26T23:14:01.616Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/wmr-staging:testIamPermissions  
+
+[debug] [2019-05-26T23:14:11.096Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-26T23:14:11.103Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wmr-staging  
+ 
+[debug] [2019-05-26T23:14:23.977Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/mnt/c/Users/jayin/development/WeMakeReality'...
+[info] 
+[debug] [2019-05-26T23:14:23.986Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/228318890104/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-26T23:14:46.624Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
