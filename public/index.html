@@ -238,7 +238,7 @@
       
             <!-- Snapshot Section Start -->
             <section class="py-5 section-padding">
-              <div class="container">
+              <div class="container snapshot">
                 <h2 class="mb-5 text-center">Snapshot</h2>
                 <div class="row">
                   <div class="col-md-3 mb-4">
@@ -265,18 +265,19 @@
               </div>
             </section>
             <!-- Snapshot Section End -->
-      
+    
       
             <!-- Detail Section Start -->
-            <div id="story-rootVR" class="container">
+            <div id="story-rootVR" class="container root-story">
               <h1> The Story </h1>
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#about-rootVR"> About </a></li>
-                <li><a href="#inspiration-rootVR"> Inspiration </a></li>
-                <li><a href="#milestones-rootVR"> Milestones </a></li>
-                <li><a href="#research-rootVR"> Research </a></li>
-                <li><a href="#get-involved-rootVR"> Get Involved </a></li>
+              <ul class="nav nav-pills">
+                <li class="active"><a data-toggle="pill" href="#about-rootVR"> About </a></li>
+                <li><a a data-toggle="pill" href="#inspiration-rootVR"> Inspiration </a></li>
+                <li><a a data-toggle="pill" href="#milestones-rootVR"> Milestones </a></li>
+                <li><a a data-toggle="pill" href="#research-rootVR"> Research </a></li>
+                <li><a a data-toggle="pill" href="#get-involved-rootVR"> Get Involved </a></li>
               </ul>
+            
             
               <div class="tab-content">
                 <div id="about-rootVR" class="tab-pane fade-in active">
@@ -364,7 +365,7 @@
             <!-- Detail Section End -->
             
             <!-- Footer Start -->
-            <section class="py-5">
+            <section class="py-5 follow-project">
               <div class="container text-center">
                 <h4 class="mb-3">Follow Project</h4>
                 <div class="mx-auto"><a href="https://twitter.com/rootvr" target="blank">
@@ -456,16 +457,17 @@
             <!-- Detail Section Start -->
             <div id="story-teachersLens" class="container">
               <h1> The Story 📖</h1>
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#about-teachersLens"> About </a></li>
-                <li><a href="#inspiration-teachersLens"> Inspiration </a></li>
-                <li><a href="#milestones-teachersLens"> Milestones </a></li>
-                <li><a href="#research-teachersLens"> Research </a></li>
-                <li><a href="#get-involved-teachersLens"> Get Involved </a></li>
-              </ul>
+              <br>
+              <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#about-teachersLens" role="tab" aria-controls="nav-home" aria-selected="true">About</a></li>
+                <a class="nav-item nav-link" id="nav-inspiration-tab" data-toggle="tab" href="#inspiration-teachersLens" role="tab" aria-controls="nav-profile" aria-selected="false"> Inspiration </a></li>
+                <a class="nav-item nav-link" id="nav-milestones-tab" data-toggle="tab" href="#milestones-teachersLens" role="tab" aria-controls="nav-profile" aria-selected="false"> Milestones </a></li>
+                <a class="nav-item nav-link" id="nav-research-tab" data-toggle="tab" href="#research-teachersLens" role="tab" aria-controls="nav-profile" aria-selected="false"> Research </a></li>
+                <a class="nav-item nav-link" id="nav-get-involved-tab" data-toggle="tab" href="#get-involved-teachersLens" role="tab" aria-controls="nav-profile" aria-selected="false"> Get Involved </a></li>
+              </div>
             
-              <div class="tab-content">
-                <div id="about-teachersLens" class="tab-pane fade-in active">
+              <div class="tab-content" id="pills-tabContent">
+                <div id="about-teachersLens" class="tab-pane fade-in active" role="tabpanel" aria-labelledby="pills-home-tab">
                   <!-- <h3>About</h3> -->
                   <br>
                   <h3> In A Nutshell </h3>
@@ -483,7 +485,7 @@
                   <br>
                 </div>
       
-                <div id="inspiration-teachersLens" class="tab-pane fade-in active">
+                <div id="inspiration-teachersLens" class="tab-pane fade-in active" role="tabpanel" aria-labelledby="pills-home-tab">
                     <br>
                     <h3> Inspiration </h3>
                   <p class="font-italic">An interview with Teacher's Lens founder and creator, Clorama Dorvilias.</p>
@@ -507,7 +509,7 @@
                   <hr>
                   </div>
                 
-                <div id="milestones-teachersLens" class="tab-pane fade">
+                <div id="milestones-teachersLens" class="tab-pane fade-in active" role="tabpanel" aria-labelledby="pills-home-tab">
                   <br>
                   <h5> 2017 </h5>
                   <ul>
@@ -531,7 +533,7 @@
                   
                 </div>
                 
-                <div id="get-involved-teachersLens" class="tab-pane fade">
+                <div id="get-involved-teachersLens" class="tab-pane fade-in active" role="tabpanel" aria-labelledby="pills-home-tab">
                   <br>
                   <h3>Seeking</h3>
                   <ul>

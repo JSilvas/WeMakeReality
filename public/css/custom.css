@@ -72,7 +72,7 @@ article {
 }
 
 .col-md-3{
-  border-left:solid 1px;
+  border-left:solid 0px;
   border-color:#ade6e6;
   padding:0.5em;
 }
@@ -131,9 +131,8 @@ article {
 .nav-tabs>li>a {
     margin-right: 2px;
     line-height: 1.42857143;
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-}
+    border: 1px solid;
+    border-radius: 4px 4px 0 0;}
 
 .nav>li>a {
     position: relative;
@@ -141,23 +140,49 @@ article {
     padding: 10px 15px;
 }
 
+.nav-tabs li.active a {border-bottom-color: transparent;background-color:#00a1ff; color:white;}
+
 
 /* Modal Windows */
 div.modal-header {
   padding: 15px 1rem;
 }
 
+.snapshot {
+  background: linear-gradient(to top right, #9ae8ed 0%, #5B86E5 100%);
+  width:100%;
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding:25px;
+}
+
 div.modal-body {
-  padding: 0;
+  padding: 5;
 }
 
 div.modal-body  div.container-fluid {
-  padding: 0;
+  padding: 50px;
+}
+
+.tab-content {
+  min-height:460px;
+}
+
+.follow-project {
+  background: linear-gradient(to top right, #9ae8ed 0%, #5B86E5 100%);
+  width:100%;
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding:25px;
 }
 
 /*Community Page*/
 
-.lightbulb{
+.lightbulb {
   width:50%;
 }
 
@@ -167,7 +192,7 @@ div.modal-body  div.container-fluid {
 }
 
 /* Desktop Layout Rules */
-@media (min-width: 992px) {
+@media (min-width: 300px) {
   
   /* Modal Windows */
   div.modal-header {
