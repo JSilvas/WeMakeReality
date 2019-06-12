@@ -48,20 +48,98 @@ h1, h2, h3, h4, h5, h6,
   font-weight: bold;
 }
 
+/* About page */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 1rem;
+}
+
+
+main {
+  max-width: 500px;
+  margin: 0 auto;
+}
+article {
+  margin: 1rem 0;
+}
+
+.snapshot{
+  margin-bottom: 70px;
+}
+
+.col-md-3{
+  border-left:solid 0px;
+  border-color:#ade6e6;
+  padding:0.5em;
+}
+/* Grid-based layout */
+
+@supports (display: grid) {
+  main { 
+    max-width: 10000px;
+    margin: 0;
+  }
+  article {
+    margin: 0;
+  }
+  .about-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+}
+  
+.about-page {
+  font-family: Avenir, Roboto, Helvetica, san-serif; 
+  font-size: 80%;
+}
+.about-image {
+  display: flex;
+  flex-flow: column;
+  padding: 0.5rem;
+}
+.about-image > h1 {
+  margin: 1rem 1rem 0;
+}
+.about-image > ul {
+  margin: 0 0 1rem;
+}
+.about-image > p {
+  margin: 0.25em 1rem 1rem;
+}
+.about-image > img {
+  order: -1;
+  align-self: center;
+}
+.about-image > button {
+  margin-top: auto; 
+  background: teal;
+  color: white;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+}
+
+
 
 /* tab naviagation styling */
 .nav-tabs>li>a {
     margin-right: 2px;
     line-height: 1.42857143;
-    border: 1px solid transparent;
-    border-radius: 4px 4px 0 0;
-}
+    border: 1px solid;
+    border-radius: 4px 4px 0 0;}
 
 .nav>li>a {
     position: relative;
     display: block;
     padding: 10px 15px;
 }
+
+.nav-tabs li.active a {border-bottom-color: transparent;background-color:#00a1ff; color:white;}
 
 
 /* Modal Windows */
@@ -70,13 +148,32 @@ div.modal-header {
 }
 
 div.modal-body {
-  padding: 0;
+  padding: 5;
 }
 
 div.modal-body  div.container-fluid {
-  padding: 0;
+  padding: 50px;
 }
 
+.tab-content {
+  min-height:460px;
+}
+
+.follow-project {
+  background: linear-gradient(to top right, #9ae8ed 0%, #5B86E5 100%);
+  width:100%;
+  height:100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  padding:25px;
+}
+
+/*Community Page*/
+
+.lightbulb {
+  width:50%;
+}
 
 /*Privacy Content Padding */
 #privacy h1,h2,h3,h4 {
@@ -84,7 +181,7 @@ div.modal-body  div.container-fluid {
 }
 
 /* Desktop Layout Rules */
-@media (min-width: 992px) {
+@media (min-width: 300px) {
   
   /* Modal Windows */
   div.modal-header {

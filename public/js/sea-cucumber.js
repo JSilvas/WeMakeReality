@@ -8,7 +8,6 @@
 		'Impact',
 		'Mistakes',
 		'Discoveries',
-		'Connections',
 		'Stories',
 		'Better Futures',
 		'It Happen'
