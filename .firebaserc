@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "wmr-staging",
+    "staging": "wmr-staging"
+  }
+}

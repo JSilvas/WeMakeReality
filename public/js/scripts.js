@@ -12,6 +12,19 @@ $( document ).ready(
 
 );
 
+// Modal Tab Navigation, clink a lick lol
+
+$('#pills-tab a').on('click', function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+
+$('#pills-tab a[href="#about-teachersLens"]').tab('show') // Select tab by name
+$('#pills-tab a[href="#inspiration-teachersLens"]').tab('show') // Select first tab
+$('#pills-tab a[href="#milestones-teachersLens"]').tab('show') // Select last tab
+$('#pills-tab a[href="#research-teachersLens"]').tab('show') // Select third tab
+$('#pills-tab a[href="#get-involved-teachersLens"]').tab('show') // Select third tab
+
 // Disable Smooth Scroll animation for accessibility concerns
 // $(this).click(function(event) {
 //   if ($('#animation').prop('checked')) {
