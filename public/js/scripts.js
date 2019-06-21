@@ -12,7 +12,36 @@ $( document ).ready(
 
 );
 
-// Modal Tab Navigation, clink a lick lol
+//Project Gallery: Modal Filtering 
+
+$(document).ready(function(){
+
+  $(".filter-button").click(function(){
+      var value = $(this).attr('data-filter');
+      
+      if(value == "all")
+      {
+          //$('.filter').removeClass('hidden');
+          $('.filter').show('3000');
+      }
+      else
+      {
+//            $('.filter[filter-item="'+value+'"]').removeClass('hidden');
+//            $(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+          $(".filter").not('.'+value).hide('5000');
+          $('.filter').filter('.'+value).show('5000');
+          
+      }
+  });
+  
+  if ($(".filter-button").removeClass("active")) {
+$(this).removeClass("active");
+}
+$(this).addClass("active");
+
+});
+
+// Project Modal: Tab Navigation
 
 $('#pills-tab a').on('click', function (e) {
   e.preventDefault()

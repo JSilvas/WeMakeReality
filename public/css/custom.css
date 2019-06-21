@@ -36,8 +36,12 @@ body {
     border: 0;
 }
 
+p.card-text{
+  font-size: 15px;
+  line-height: 142%;
+}
 
-/* project preview cards */
+/* Project Preview Cards */
 #projects a {
   appearance: none;
   -moz-appearance: none;
@@ -47,6 +51,8 @@ body {
 .card {
   transition: box-shadow 0.5s;
 }
+
+
 
 .card:hover {
   box-shadow: 0 10px 25px rgba(0,0,0,0.3);
@@ -83,6 +89,8 @@ article {
   border-color:#ade6e6;
   padding:0.5em;
 }
+
+
 /* Grid-based layout */
 
 @supports (display: grid) {
@@ -132,9 +140,7 @@ article {
   font-size: 1.2rem;
 }
 
-
-
-/* tab naviagation styling */
+/* Tab Naviagation Styling */
 .nav-tabs>li>a {
     margin-right: 2px;
     line-height: 1.42857143;
@@ -149,8 +155,54 @@ article {
 
 .nav-tabs li.active a {border-bottom-color: transparent;background-color:#00a1ff; color:white;}
 
+/*Project Gallery: Search*/
 
-/* Modal Windows */
+.form-inline[type=text]{
+  border: 1px solid #4dd0e1;
+  box-shadow: 0 0 0 1px #4dd0e1;
+  width: 100%;
+  margin-top:80px;
+  text-align:center;
+  }
+
+
+/*Project Gallery: Filter System*/
+
+.filters{
+  margin-top:50px;
+}
+
+.filter-button
+{
+    font-size: 18px;
+    font-weight: 400;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    color:black;
+    margin-bottom: 20px;
+    margin-top:20px;
+
+}
+.filter-button:hover
+{
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    color: black;
+    background-color: white;
+
+}
+
+.btn-default:active .filter-button:active
+{
+    background-color: white;
+    color: white;
+}
+
+
+/* Project Gallery: Modal Windows */
 div.modal-header {
   padding: 15px 1rem;
 }
@@ -189,7 +241,7 @@ div.modal-body  div.container-fluid {
 }
 
 /* Desktop Layout Rules */
-@media (min-width: 300px) {
+@media (min-width: 700px) {
   
   /* Modal Windows */
   div.modal-header {
