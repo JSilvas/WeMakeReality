@@ -10,7 +10,6 @@
 		'Discoveries',
 		'Stories',
 		'Better Futures',
-		'It Happen'
 	];
 	i = 0;
 	setInterval(function(){
