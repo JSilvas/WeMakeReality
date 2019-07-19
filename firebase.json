@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "wmr-dynamic-test",
     "public": "public",
     "ignore": [
       "firebase.json",
